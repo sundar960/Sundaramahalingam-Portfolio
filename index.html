@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundaramahalingam G - Senior Supplier Quality Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .title {
+            font-size: 1.3rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .contact-item i {
+            color: #667eea;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .duration {
+            font-size: 0.95rem;
+            color: #777;
+            background: #e8f0fe;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-left: auto;
+        }
+
+        .responsibilities {
+            list-style: none;
+            padding: 0;
+        }
+
+        .responsibilities li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .responsibilities li:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 0.8rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .skill-category p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .cert-item {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: scale(1.02);
+        }
+
+        .cert-item i {
+            font-size: 2rem;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .achievement {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #27ae60;
+            text-align: center;
+        }
+
+        .achievement i {
+            font-size: 3rem;
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+
+        .achievement h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .duration {
+                margin-left: 0;
+                align-self: flex-start;
+            }
+        }
+
+        .personal-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+
+        .info-item strong {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>Sundaramahalingam G</h1>
+            <div class="title">Senior Supplier Quality Assurance Engineer</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+66-0-807132001</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>sundar960@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Phetchaburi, Thailand</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/sundaramahalingam-g-9908a1b4</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-user-tie"></i>
+                Professional Summary
+            </h2>
+            <div class="summary">
+                Professional supplier quality assurance engineer with 13+ years of experience in supplier process development and supplier quality in EMS and automotive/auto ancillary industries. Proven track record in implementing quality systems, conducting supplier audits, and driving continuous improvement initiatives that deliver measurable results.
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i>
+                Professional Experience
+            </h2>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Supplier Quality Engineer</div>
+                        <div class="company">NEW KINPO GROUP, CAL-COMP ELECTRONICS</div>
+                        <div style="color: #777; margin-top: 5px;">Phetchaburi, Thailand</div>
+                    </div>
+                    <div class="duration">June 2019 – June 2021 & March 2022 - Present</div>
+                </div>
+                <ul class="responsibilities">
+                    <li>Monitored and reported supplier performance to ensure timely implementation of corrective actions</li>
+                    <li>Generated and managed Supplier Corrective Action Requests (SCARs), following up with suppliers for closure using the 8D methodology</li>
+                    <li>Served as a member of the Material Review Board (MRB) to review and disposition supplier-related nonconformance material reports</li>
+                    <li>Maintained the supplier audit system, scheduling and conducting audits to ensure compliance and improvement</li>
+                    <li>Led supplier readiness assessments for new product launches, driving action plans through APQP</li>
+                    <li>Performed PPAP activities and conducted Run at Rate assessments to validate supplier processes</li>
+                    <li>Prepared monthly reports to monitor and reduce supplier defect rates (PPM)</li>
+                    <li>Guided teams on quality standards and continuous improvement concepts</li>
+                    <li>Collaborated with QA teams to meet customer-specific quality requirements</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">NPD Project Engineer</div>
+                        <div class="company">INNOVALUES PRECISION CO.LTD</div>
+                        <div style="color: #777; margin-top: 5px;">Ayutthaya, Thailand</div>
+                    </div>
+                    <div class="duration">July 2018 - May 2019</div>
+                </div>
+                <ul class="responsibilities">
+                    <li>Developed project objectives by reviewing proposals and aligning them with overall product plans</li>
+                    <li>Led the Team Feasibility Commitment (TFC), collaborating with cross-functional teams to improve product design and manufacturability</li>
+                    <li>Prepared APQP and PPAP documentation, along with detailed process work instructions for new product development</li>
+                    <li>Managed customer complaints by conducting root cause analysis and implementing corrective and preventive actions</li>
+                    <li>Monitored key performance indicators (KPI) and contributed to continuous improvement activities</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Supplier Quality Engineer</div>
+                        <div class="company">SYNERGY GLOBAL SOURCING</div>
+                        <div style="color: #777; margin-top: 5px;">Hosur, India</div>
+                    </div>
+                    <div class="duration">April 2017 - June 2018</div>
+                </div>
+                <ul class="responsibilities">
+                    <li>Assessed and audited suppliers to ensure compliance with quality standards</li>
+                    <li>Conducted supplier process standardization and continuous improvement audits</li>
+                    <li>Monitored supplier PPM and implemented rating systems</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Supplier Quality Executive</div>
+                        <div class="company">M/S. ESSAE DIGITRONICS PVT LTD</div>
+                        <div style="color: #777; margin-top: 5px;">Bangalore, India</div>
+                    </div>
+                    <div class="duration">January 2015 - September 2016</div>
+                </div>
+                <ul class="responsibilities">
+                    <li>Resolved technical issues with suppliers to ensure continuous supply</li>
+                    <li>Implemented corrective actions and conducted supplier audits for process improvement</li>
+                    <li>Validated effectiveness of corrective actions through on-site visits</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">In-Process Quality Supervisor</div>
+                        <div class="company">M/S. KAY JAY FORGING PVT. LTD</div>
+                        <div style="color: #777; margin-top: 5px;">Hosur, India</div>
+                    </div>
+                    <div class="duration">September 2012 - December 2014</div>
+                </div>
+                <ul class="responsibilities">
+                    <li>Deployed process control measures to ensure defect-free components</li>
+                    <li>Analyzed data using 7 QC tools and led cross-functional teams for quality improvements</li>
+                    <li>Conducted in-house product and dock audits to ensure zero defects</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key Skills Section -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-cogs"></i>
+                Key Skills & Expertise
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-certificate"></i> Quality Systems</h4>
+                    <p>IATF 16949, ISO 9001:2015</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-tools"></i> AIAG Core Tools</h4>
+                    <p>APQP, PPAP, SPC, FMEA, MSA</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-industry"></i> Manufacturing Processes</h4>
+                    <p>CNC Machining, Forging, Casting, Injection Molding</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-microchip"></i> Electronics Manufacturing</h4>
+                    <p>PCB, PCBA, SMT Processes (IPC-A-600, IPC-A-610)</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-search"></i> Problem-Solving Tools</h4>
+                    <p>8D, 5 Whys, Root Cause Analysis, Poka Yoke, DOE</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-laptop"></i> Software & Tools</h4>
+                    <p>Minitab, Microsoft Office Suite</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-chart-line"></i> Lean & Six Sigma</h4>
+                    <p>Lean Six Sigma, Kaizen, Continuous Improvement, CTQ, COPQ</p>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-clipboard-check"></i> Auditing</h4>
+                    <p>Process, Product, and Dock Audits</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-award"></i>
+                Certifications
+            </h2>
+            <div class="certifications">
+                <div class="cert-item">
+                    <i class="fas fa-medal"></i>
+                    <h4>ISO 9001:2015 Lead Auditor</h4>
+                    <p>IRCA CQI Certification</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <h4>IATF 16949 Internal Auditor</h4>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Lean Six Sigma Black Belt</h4>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>ASQ CQE Training</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Achievement Section -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-star"></i>
+                Key Achievement
+            </h2>
+            <div class="achievement">
+                <i class="fas fa-chart-line"></i>
+                <h3>Outstanding Quality Improvement</h3>
+                <p>Reduced supplier DPPM from 10,000 to 500 within 6 months through QC tools, Lean, and Kaizen initiatives.</p>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                Education
+            </h2>
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Bachelor of Engineering in Mechanical</div>
+                        <div class="company">Sethu Institute of Technology (Anna University)</div>
+                    </div>
+                    <div class="duration">2008 - 2012</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Information Section -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-user"></i>
+                Personal Information
+            </h2>
+            <div class="personal-info">
+                <div class="info-item">
+                    <strong>Date of Birth:</strong><br>09-05-1991
+                </div>
+                <div class="info-item">
+                    <strong>Marital Status:</strong><br>Married
+                </div>
+                <div class="info-item">
+                    <strong>Passport No.:</strong><br>Z6308637
+                </div>
+                <div class="info-item">
+                    <strong>Languages:</strong><br>Tamil, English, Kannada, Thai
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="section" style="text-align: center;">
+            <h2 class="section-title">
+                <i class="fas fa-download"></i>
+                Get My Resume
+            </h2>
+            <p style="margin-bottom: 20px; color: #666;">Download my complete resume for detailed information</p>
+            <a href="#" class="download-btn" onclick="alert('Please contact me directly for resume download')">
+                <i class="fas fa-file-pdf"></i> Request Resume
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Add hover effects for experience items
+        const experienceItems = document.querySelectorAll('.experience-item');
+        experienceItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
